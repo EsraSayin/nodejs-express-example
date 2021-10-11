@@ -1,0 +1,451 @@
+_type: export
+__export_format: 4
+__export_date: 2021-10-11T07:43:06.574Z
+__export_source: insomnia.desktop.app:v2021.5.3
+resources:
+  - _id: req_4e190dd73ddb4f2bb93fed9795062f30
+    parentId: fld_6e7e15f03bcb45d1833128abf0d2a212
+    modified: 1633938114008
+    created: 1633707860071
+    url: "{{ _.local }}/comments"
+    name: Create Comment
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"text": "Comment Text",
+        	"date": "2004-10-12",
+        	"studentId":"1"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_d19143389b4f4fbf8e32d06841373d48
+    authentication: {}
+    metaSortKey: -1633707860071
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_6e7e15f03bcb45d1833128abf0d2a212
+    parentId: wrk_527d3a83e25e4312af549e4a7aadff07
+    modified: 1633938110824
+    created: 1633938110824
+    name: Comments
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1633938110824
+    _type: request_group
+  - _id: wrk_527d3a83e25e4312af549e4a7aadff07
+    parentId: null
+    modified: 1625254405572
+    created: 1625254405572
+    name: My Collection
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_c82d2881f482410192dfa472d17d9dd1
+    parentId: fld_6e7e15f03bcb45d1833128abf0d2a212
+    modified: 1633938117220
+    created: 1633937856609
+    url: "{{ _.local }}/comments"
+    name: Get Comments
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1633707860046
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_34566db5327145a08a41c81c72bb1966
+    parentId: fld_6e7e15f03bcb45d1833128abf0d2a212
+    modified: 1633938119133
+    created: 1633937894574
+    url: "{{ _.local }}/comments/6163e9a63f3f7b1d874aba24"
+    name: Get Comment
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1633707860033.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c136c25e07d14699b7e338bffd9d2d75
+    parentId: fld_6e7e15f03bcb45d1833128abf0d2a212
+    modified: 1633938115568
+    created: 1633937935654
+    url: "{{ _.local }}/comments/6163e9a63f3f7b1d874aba24"
+    name: Update Comment
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"text": "Comment Text- 2",
+        	"date": "2009-10-12",
+        	"studentId":"1"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_d19143389b4f4fbf8e32d06841373d48
+    authentication: {}
+    metaSortKey: -1633707860021
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ae5172fd34e3452a9726cf47d68ce8db
+    parentId: fld_6e7e15f03bcb45d1833128abf0d2a212
+    modified: 1633938120162
+    created: 1633938025187
+    url: "{{ _.local }}/comments/6163e9a63f3f7b1d874aba24"
+    name: Delete Comments
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1633707859971
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_2d86b989edd74c7f84d132cb060fd808
+    parentId: fld_760652a6ef2a421dbb1ad466735cfdd5
+    modified: 1633938129578
+    created: 1633705835048
+    url: "{{ _.local }}/teachers/"
+    name: Create Teacher
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "John",
+        	"surname": "Doe",
+        	"idCardNumber": "11111111",
+        	"birthDate": "2021-10-08"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_f1db47c00dcb4ecbb314e5a9d762bd2c
+    authentication: {}
+    metaSortKey: -1633705835048
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_760652a6ef2a421dbb1ad466735cfdd5
+    parentId: wrk_527d3a83e25e4312af549e4a7aadff07
+    modified: 1633938106887
+    created: 1633938106887
+    name: Teachers
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1633938106887
+    _type: request_group
+  - _id: req_55ba599a61c347c6a4ee6003f6c7af3a
+    parentId: fld_760652a6ef2a421dbb1ad466735cfdd5
+    modified: 1633938140893
+    created: 1633937247905
+    url: "{{ _.local }}/teachers"
+    name: Get Teachers
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1633705835029.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_89e2824106ae4c0c88c43498babe1f43
+    parentId: fld_760652a6ef2a421dbb1ad466735cfdd5
+    modified: 1633938135804
+    created: 1633937288722
+    url: "{{ _.local }}/teachers/6163e73b3f3f7b1d874aba11"
+    name: Get Teacher
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1633705835010.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7babb485758d4afbbb7e52fd85224dba
+    parentId: fld_760652a6ef2a421dbb1ad466735cfdd5
+    modified: 1633938139308
+    created: 1633937366567
+    url: "{{ _.local }}/teachers/6163e73b3f3f7b1d874aba11"
+    name: Update Teacher
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "John",
+        	"surname": "Doel",
+        	"idCardNumber": "11111111",
+        	"birthDate": "2021-10-08"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_f1db47c00dcb4ecbb314e5a9d762bd2c
+    authentication: {}
+    metaSortKey: -1633705834948
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_04cc52848ba94a1ea717ffa16d3e1507
+    parentId: fld_760652a6ef2a421dbb1ad466735cfdd5
+    modified: 1633938144581
+    created: 1633850326518
+    url: "{{ _.local }}/teachers/6163e74a3f3f7b1d874aba13"
+    name: Delete Teacher
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1633705834898
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8049d4adb9034bf7ac55df872164a6e5
+    parentId: fld_d5fbe02fd9fc4bba9bc3f9d0786fdf6b
+    modified: 1633938122852
+    created: 1633707789340
+    url: "{{ _.local }}/students"
+    name: Create Student
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+        	"name": "Johnny",
+        	"surname": "Abc",
+        	"idCardNumber": "25222222",
+        	"birthdate":""
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_59b5f58455674dc39e5cc038aea5a02c
+    authentication: {}
+    metaSortKey: -1633707789340
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_d5fbe02fd9fc4bba9bc3f9d0786fdf6b
+    parentId: wrk_527d3a83e25e4312af549e4a7aadff07
+    modified: 1633938102135
+    created: 1633938102135
+    name: Students
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1633938102135
+    _type: request_group
+  - _id: req_e13369113ca246c9a3238ee91f19fdcc
+    parentId: fld_d5fbe02fd9fc4bba9bc3f9d0786fdf6b
+    modified: 1633938125146
+    created: 1633937575710
+    url: "{{ _.local }}/students"
+    name: Get Students
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1633707789315
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f1d44b3fe10b42598383216c80efe2a4
+    parentId: fld_d5fbe02fd9fc4bba9bc3f9d0786fdf6b
+    modified: 1633938126411
+    created: 1633937593860
+    url: "{{ _.local }}/students/6163e8903f3f7b1d874aba1a"
+    name: Get Student
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1633707789302.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b1839e38c59746159cf26bea698a18a4
+    parentId: fld_d5fbe02fd9fc4bba9bc3f9d0786fdf6b
+    modified: 1633938124127
+    created: 1633937702892
+    url: "{{ _.local }}/students/6163e9333f3f7b1d874aba1e"
+    name: Update  Student
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+        	"name": "Johnny",
+        	"surname": "Adams",
+        	"idCardNumber": "25222222",
+        	"birthdate":""
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_59b5f58455674dc39e5cc038aea5a02c
+    authentication: {}
+    metaSortKey: -1633707789290
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_aa58615e0b9144d5a6333d607b931a6d
+    parentId: fld_d5fbe02fd9fc4bba9bc3f9d0786fdf6b
+    modified: 1633938127901
+    created: 1633937775730
+    url: "{{ _.local }}/students/6163e8903f3f7b1d874aba1a"
+    name: Delete Student
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1633707789240
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_8025e9efaffb3be819be4f4974d046cb92cc3891
+    parentId: wrk_527d3a83e25e4312af549e4a7aadff07
+    modified: 1633936453933
+    created: 1625254405667
+    name: Base Environment
+    data:
+      local: http://localhost:8090
+    dataPropertyOrder:
+      "&":
+        - local
+    color: null
+    isPrivate: false
+    metaSortKey: 1625254405667
+    _type: environment
+  - _id: jar_8025e9efaffb3be819be4f4974d046cb92cc3891
+    parentId: wrk_527d3a83e25e4312af549e4a7aadff07
+    modified: 1625254405673
+    created: 1625254405673
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_4dfb7c9cbcee459fb0779f41792d0d89
+    parentId: wrk_527d3a83e25e4312af549e4a7aadff07
+    modified: 1625254405576
+    created: 1625254405576
+    fileName: My Collection
+    contents: ""
+    contentType: yaml
+    _type: api_spec
