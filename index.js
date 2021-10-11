@@ -8,10 +8,9 @@ const studentRouter = require('./api/routes/studentRouter');
 const commentRouter = require('./api/routes/commentRouter');
 
 
-const URI = "mongodb://admin:admin@mongo:27017/school?authSource=admin&authMechanism=SCRAM-SHA-1";
+const URI = "mongodb://admin:admin@localhost:27017/school?authSource=admin&authMechanism=SCRAM-SHA-1";
 
 const client = new MongoClient(URI);
-
 
 const port = 8090;
 
@@ -32,4 +31,5 @@ async function run() {
     app.use('/comments', commentRouter);
 }
 
+module.exports = app;
 
