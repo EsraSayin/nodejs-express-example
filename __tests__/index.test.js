@@ -2,15 +2,17 @@ const request = require('supertest');
 const app = require('../index');
 const Teacher = require('../model/teacher');
 const Student = require('../model/student');
-
-let URL = "/teachers";
+const Comment = require('../model/comment');
 
 beforeAll(async () => {
     await Teacher.deleteMany();
     await Student.deleteMany();
+    await Comment.deleteMany();
 });
 
 describe('Teacher API tests', () => {
+
+    let URL = "/teachers";
 
     let teacher =  {name: "John", surname: "Doe", idCardNumber: "11111111T", birthDate: "2018-10-10T00:00:00.000Z"};
 
@@ -179,3 +181,89 @@ describe('Student API tests', () => {
         })
     });
 });
+
+describe('Comment API tests', () => {
+
+    let URL = "/comments";
+ 
+     let comment =  {text: "Comment Text", date: "2021-10-10T00:00:00.000Z", studentId:"1"};
+ 
+     it('Get all comments empty', (done) => {
+         const expectedResponse = []
+         request(app)
+         .get(URL)
+         .expect(200)
+         .end((err, res) => {
+             expect(res.body).toEqual(expectedResponse)
+             done();
+         })
+     });
+ 
+     it('Create a comment', (done) => {
+         request(app)
+         .post(URL)
+         .send(comment)
+         .expect(200)
+         .end((err, res) => {
+             comment._id = res.body._id;
+             comment.__v = res.body.__v;
+             expect(res.body).toEqual(comment)
+             done();
+         })
+     });
+ 
+     it('Get all comments not empty', (done) => {
+         request(app)
+         .get(URL)
+         .expect(200)
+         .end((err, res) => {
+             expect(res.body[0]).toEqual(comment)
+             done();
+         })
+     });
+ 
+     it('Get comment by id', (done) => {
+         request(app)
+         .get(URL + '/' + comment._id)
+         .expect(200)
+         .end((err, res) => {
+             expect(res.body).toEqual(comment)
+             done();
+         })
+     });
+ 
+     it('Update a comment', (done) => {
+         let updatedComment = comment;
+         updatedComment.text = "UpdatedText";
+         const expectedResponse = {...comment, ...updatedComment}
+         request(app)
+         .put(URL + '/' + comment._id)
+         .send(updatedComment)
+         .expect(200)
+         .end((err, res) => {
+             expect(res.body).toEqual(expectedResponse)
+             done();
+         })
+     });
+     
+     it('Delete comment', (done) => {
+         request(app)
+         .delete(URL + '/' + comment._id)
+         .expect(204)
+         .end((err, res) => {
+             expect(res.body).toEqual({})
+             done();
+         })
+     });
+ 
+     it('Get all comments empty after deletion', (done) => {
+         const expectedResponse = []
+         request(app)
+         .get(URL)
+         .expect(200)
+         .end((err, res) => {
+             expect(res.body).toEqual(expectedResponse)
+             done();
+         })
+     });
+ });
