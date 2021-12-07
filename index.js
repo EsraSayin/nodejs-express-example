@@ -7,8 +7,12 @@ const teacherRouter = require('./api/routes/teacherRouter');
 const studentRouter = require('./api/routes/studentRouter');
 const commentRouter = require('./api/routes/commentRouter');
 
+const environment = process.env.ENVIRONMENT;
 
-const URI = "mongodb://admin:admin@localhost:27017/school?authSource=admin&authMechanism=SCRAM-SHA-1";
+const mongoEnvironment = environment === "production" ? "mongo" : "localhost";
+
+
+const URI = "mongodb://admin:admin@" + mongoEnvironment + ":27017/school?authSource=admin&authMechanism=SCRAM-SHA-1";
 
 const client = new MongoClient(URI);
 
