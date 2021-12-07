@@ -35,7 +35,7 @@ curl -X POST \
 
 ```
 curl -X POST \
-  http://localhost:8090/student \
+  http://localhost:8090/students \
   -H 'Content-Type: application/json' \
   -H 'cache-control: no-cache' \
   -d '{
@@ -50,7 +50,7 @@ curl -X POST \
 
 ```
 curl -X POST \
-  http://localhost:8090/student \
+  http://localhost:8090/comments \
   -H 'Content-Type: application/json' \
   -H 'cache-control: no-cache' \
   -d '{
