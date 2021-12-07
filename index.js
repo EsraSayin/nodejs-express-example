@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const {MongoClient} = require('mongodb');
 const mongoose = require('mongoose');
+const cors = require('cors')
 
 const teacherRouter = require('./api/routes/teacherRouter');
 const studentRouter = require('./api/routes/studentRouter');
@@ -18,6 +19,7 @@ const client = new MongoClient(URI);
 
 const port = 8090;
 
+app.use(cors())
 app.use(express.urlencoded({extended: true})); 
 app.use(express.json());
 run();
